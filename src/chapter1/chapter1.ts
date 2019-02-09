@@ -68,3 +68,14 @@ create(null); // OK
 // create("string"); // Error
 // create(false); // Error
 create(undefined); // OK, --strictNullChecks 킬 경우 에러
+
+function foo() {
+    // okay to capture 'a'
+    return a;
+}
+
+// illegal call 'foo' before 'a' is declared
+// runtimes should throw an error here
+foo();
+
+let a;
