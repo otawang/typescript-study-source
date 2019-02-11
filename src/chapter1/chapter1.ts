@@ -79,3 +79,15 @@ function foo() {
 foo();
 
 let a;
+
+const test1 ={a:10, b:20, c:30};
+
+function testSpread(...test1) {
+    console.log(test1);
+}
+
+function testSpread2(a) {
+    console.log(...a);
+}
+
+testSpread2({a:1, b:2, c:3});
